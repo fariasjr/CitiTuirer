@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'tuites',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +82,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# USERS
+
+AUTH_USER_MODEL ='users.User'
 
 
 # Password validation
