@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    {% for number in "123456" %}
+            <div style="color: {% if forloop.first or forloop.last %}
+                                    red
+                                {% else %}
+                                    blue
+                                {% endif %}; 
+                        border: 1px solid black;">    
+                Olá, tudo bem? Foda-se!
+                {% include 'includes/card.html' with content=number author="Filho Cris" %}
+            </div>
+    {% endfor %}
+
+{% endblock %}

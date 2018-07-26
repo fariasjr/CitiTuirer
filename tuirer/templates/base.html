@@ -1,0 +1,51 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Tuirer</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <!-- <style>
+            body{
+                background: #f0f0f0;
+                font-family: sans-serif;
+            }
+
+            footer{
+                background: orange;
+            }
+        </style> -->
+    </head>
+    <body>
+        <h2>Tuirer</h2>
+        <!-- <p>{% lorem 1 p%}</p> -->
+        <!-- <p>{{ user }}</p> -->
+        <p>
+            <br>{{ now|date:"d \d\e F \d\e Y" }} <br> <br>
+            
+            <!-- {% if user.is_authenticated %}
+                Olá, {{ user }}!
+            {% else %}
+                Saia daqui por favor.
+            {% endif %} -->
+            <!-- Meu nome é {{ my_name }}
+            <br>
+            Seu pais é {{ country_name }}
+            <br>
+            <img> {{ flag_image }}</p>img> -->
+            
+            <!-- <form>
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Nome">
+                <input type="submit" value="Enviar">
+            </form> -->
+            {% block body %}
+                Hello.
+            {% endblock %}
+        </p>
+        <footer>
+            {% block footer %}
+                Esse é meu footer.
+            {% endblock %}
+        </footer>
+    </body>
+</html>
