@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .helpers import get_character_name, ip_info
 from datetime import datetime
+from tuites.models import Tuite
 #from random import randint
 
 # Create your views here.
@@ -29,8 +30,8 @@ def index(request):
         # 'my_name': 'Julia',
         # 'country_name': country,
         # 'flag_image': flag_image,
-        'now': datetime.now()
-
+        'now': datetime.now(),
+        'tuites': Tuite.objects.all(),
     }
 
     return render(request, 'home.html', context)

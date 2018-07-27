@@ -1,3 +1,11 @@
 body {
     background: rgb(240, 176, 176)
 }
+
+.error{
+    background: rgb(189, 0, 0)
+}
+
+.sucess_message{
+    background: rgb(58, 153, 3)
+}
