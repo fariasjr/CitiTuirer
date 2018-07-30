@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class TuitesManager(models.Manager):
 
     def search(self, query):
@@ -7,4 +8,3 @@ class TuitesManager(models.Manager):
             models.Q(content__icontains=query),
             models.Q(author__username__icontains=query)
         )
-
